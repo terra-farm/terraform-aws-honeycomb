@@ -19,7 +19,7 @@ module "postgresql_production_logs" {
   environment         = "production"
   rds_id              = "your-production-postgresql-rds-id"
   dataset             = "your-dataset-name-on-honeycomb"
-  version             = "1.6.0"
+  lambda_version      = "1.6.0"
   honeycomb_write_key = "CiphertextBlob-of-your-KMS-encrypted-honeycomb-write-key"
   kms_key_id          = "kms-key-id-used-to-encrypt-the-write-key"
 }

@@ -10,7 +10,7 @@ data "aws_region" "current" {}
 
 resource "aws_lambda_function" "honeycomb_postgresql_rds_logs" {
   s3_bucket     = "honeycomb-integrations-${data.aws_region.current.name}"
-  s3_key        = "agentless-integrations-for-aws/${var.version}/ingest-handlers.zip"
+  s3_key        = "agentless-integrations-for-aws/${var.lambda_version}/ingest-handlers.zip"
   function_name = "honeycomb-postgresql-${var.project}-${var.environment}-logs"
   role          = "${module.permissions.honeycomb_logs_role_arn}"
   handler       = "postgresql-handler"

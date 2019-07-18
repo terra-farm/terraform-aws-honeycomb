@@ -10,7 +10,7 @@ variable "rds_id" {
   description = "RDS instance identifier. The logs from this RDS instance will be sent to Honeycomb."
 }
 
-variable "version" {
+variable "lambda_version" {
   description = "Version of the Honeycomb.io agentless Lambda function(s) to deploy. See [here](https://github.com/honeycombio/agentless-integrations-for-aws/releases) for the available versions."
   default     = "LATEST"
 }
