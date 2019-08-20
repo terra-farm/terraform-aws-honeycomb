@@ -17,6 +17,7 @@ This repo has the following folder structure:
 To deploy the agentless integration for a specific log/metrics aggregation to Honeycomb.io:
 
 * [postgresql](modules/postgresql/README.md)
+* [publisher](modules/publisher/README.md)
 
 ## How do I contribute to this Module?
 
