@@ -28,7 +28,7 @@ Example:
 
 ```hcl
 module "honeycomb_publisher" {
-  source               = "terra-farm/honeycomb/aws/modules/publisher"
+  source               = "terra-farm/honeycomb/aws//modules/publisher"
   version              = "0.0.3"
   project              = "your-application-project-name"
   environment          = "production"

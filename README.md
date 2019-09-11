@@ -16,8 +16,8 @@ This repo has the following folder structure:
 
 To deploy the agentless integration for a specific log/metrics aggregation to Honeycomb.io:
 
-* [postgresql](modules/postgresql/README.md)
-* [publisher](modules/publisher/README.md)
+* [postgresql](https://github.com/terra-farm/terraform-aws-honeycomb/blob/master/modules/postgresql/README.md)
+* [publisher](https://github.com/terra-farm/terraform-aws-honeycomb/blob/master/modules/publisher/README.md)
 
 ## How do I contribute to this Module?
 
