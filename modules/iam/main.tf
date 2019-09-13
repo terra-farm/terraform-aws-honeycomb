@@ -1,5 +1,5 @@
 resource "aws_iam_role" "honeycomb_logs_role" {
-  name = "honeycomb-${var.integration_type}-logs-role"
+  name = "honeycomb-${var.integration_type}-logs-role-${var.environment}"
 
   assume_role_policy = <<EOF
 {
@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "honeycomb_lambda_log_policy" {
-  name = "honeycomb-${var.integration_type}-lambda-logs-policy"
+  name = "honeycomb-${var.integration_type}-lambda-logs-policy-${var.environment}"
   role = "${aws_iam_role.honeycomb_logs_role.id}"
 
   policy = <<EOF
@@ -41,7 +41,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "honeycomb_lambda_kms_policy" {
-  name = "honeycomb-${var.integration_type}-lambda-kms-policy"
+  name = "honeycomb-${var.integration_type}-lambda-kms-policy-${var.environment}"
   role = "${aws_iam_role.honeycomb_logs_role.id}"
 
   policy = <<EOF
